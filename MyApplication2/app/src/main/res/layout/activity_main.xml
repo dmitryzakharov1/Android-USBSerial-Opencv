@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="red"
+        android:id="@+id/btnred"
+        android:onClick="onClickRed"
+        android:layout_below="@+id/progressBarTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="green"
+        android:id="@+id/btngreen"
+        android:onClick="onClickGreen"
+        android:layout_below="@+id/progressBarTitle"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="blue"
+        android:id="@+id/btnblue"
+        android:onClick="onClickBlue"
+        android:layout_below="@+id/progressBarTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/demoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="app_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/progressBarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="refreshing"
+        android:padding="8dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/demoTitle"
+        android:layout_alignLeft="@+id/demoTitle"
+        android:layout_alignStart="@+id/demoTitle" />
+
+
+
+    <org.opencv.android.JavaCameraView
+        android:layout_width="300px"
+        android:layout_height="200px"
+        android:visibility="gone"
+        android:id="@+id/tutorial1_activity_java_surface_view"
+        opencv:show_fps="true"  opencv:camera_id="any" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/consoleText"
+        android:layout_below="@+id/btngreen"
+        android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="200px"
+        android:id="@+id/deviceList"
+        android:layout_below="@+id/consoleText"
+        android:layout_toLeftOf="@+id/progressBarTitle"
+        android:layout_toStartOf="@+id/progressBarTitle" />
+
+
+
+</RelativeLayout>
